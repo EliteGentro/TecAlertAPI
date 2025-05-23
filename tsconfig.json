@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",   // or "ES2022" or "ES6"
+    "target": "ES2022",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

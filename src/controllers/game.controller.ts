@@ -100,8 +100,8 @@ export const match = async (req:Request,res:Response):Promise<any> => {
 
 export const questions = async (req:Request,res:Response):Promise<any> => {
     
-    const questionsNum = 5;
-    const questionsCount = 10;
+    const questionsNum = 10;
+    const questionsCount = 50;
     let numberArray: number[] = [];
     let questionArray = [];
     

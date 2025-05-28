@@ -89,7 +89,7 @@ export const addcontent = async (req: Request, res: Response): Promise<any> => {
         const conn = await getConnection();
         await conn?.request()
             .input('type', sql.VarChar(255), type)
-            .input('url', sql.VarChar(255), url)
+            .input('url', sql.NText, url)
             .query(`EXEC spAddContent @type, @url;`);
 
         res.status(200).json({ message: "Content added successfully" });

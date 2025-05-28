@@ -144,7 +144,7 @@ export const editcontents = async (req: Request, res: Response): Promise<any> =>
         await conn?.request()
             .input('content_id', sql.Int, content_id)
             .input('type', sql.VarChar(255), type)
-            .input('url', sql.VarChar(255), url)
+            .input('url', sql.NText, url)
             .query(`EXEC spEditContents @content_id, @type, @url;`);
 
         res.status(200).json({ message: "Content updated successfully" });

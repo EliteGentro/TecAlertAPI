@@ -41,7 +41,7 @@ export const leaderboard = async (req:Request, res:Response):Promise<any> => {
     try {
         const conn = await getConnection();
         const playerStats = await conn?.request()
-        .input('num', sql.Int, 5)
+        .input('num', sql.Int, 10)
         .query(
             `
             EXEC spTopPlayers @num;
